@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>2048</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QPushButton" name="element11">
@@ -524,12 +524,6 @@
      <height>21</height>
     </rect>
    </property>
-   <widget class="QMenu" name="menu2048">
-    <property name="title">
-     <string>2048</string>
-    </property>
-   </widget>
-   <addaction name="menu2048"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
