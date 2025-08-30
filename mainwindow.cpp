@@ -148,14 +148,15 @@ void MainWindow::keyPressEvent(QKeyEvent* event)
 
         if (checkGameOver())
             on_buttonNewGame_clicked();
+        else if (checkVictory())
+            on_buttonNewGame_clicked();
         else
         {
             createNewValue();
             valuesToColors();
             showNewResult(calculateScore());
+            saveGame();
         }
-
-        saveGame();
     }
 }
 
@@ -527,6 +528,22 @@ bool MainWindow::checkGameOver()
 
     QMessageBox::information(this, "Game over", "Your game over. Starting new game...");
     return true;
+}
+
+bool MainWindow::checkVictory()
+{
+    for (int row = 0; row <= 3; ++row)
+    {
+        for (int column = 0; column <= 3; ++column)
+        {
+            if (valueMatrix[row][column] == 2048)
+            {    QMessageBox::information(this, "Victory", "You win! Starting new game...");
+                return true;
+            }
+        }
+    }
+
+    return false;
 }
 
 void MainWindow::valuesToColors()

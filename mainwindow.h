@@ -35,6 +35,7 @@ private slots:
     void moveElementsToEdge(int direction);
     void calculateElements(int direction);
     bool checkGameOver();
+    bool checkVictory();
     void createNewValue();
     void valuesToColors();
     int calculateScore();
