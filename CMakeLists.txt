@@ -23,6 +23,8 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(2048
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
+        engine.h engine.cpp
+
 
     )
 # Define target properties for Android with Qt 6 as:
